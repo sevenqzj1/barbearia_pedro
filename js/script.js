@@ -1,8 +1,7 @@
 'use strict';
 
 const SITE_CONFIG = {
-  // Configure com o telefone oficial: DDI + DDD + número, somente dígitos.
-  // Exemplo de formato: 5534999999999. Não use um número fictício.
+  
   whatsappNumber: '553492190755',
   businessName: 'Pedro Barber'
 };
@@ -191,7 +190,6 @@ if (bookingForm) {
       if (dateField) dateField.focus();
       return;
     }
-
     const dateFormatted = new Intl.DateTimeFormat('pt-BR', {
       dateStyle: 'long',
       timeZone: 'UTC'
