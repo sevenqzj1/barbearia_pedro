@@ -33,9 +33,10 @@
     <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
       <a href="#inicio">Início</a>
       <a href="#sobre">A barbearia</a>
-      <a href="#servicos">Serviços</a>
+      <a href="#servicos">Serviços e preços</a>
       <a class="nav-cta whatsapp-link" href="#agendar">Agendar horário <span aria-hidden="true">↗</span></a>
       <a href="#galeria">Galeria</a>
+      <a href="#localizacao">Localização</a>
     </nav>
   </header>
 
@@ -88,13 +89,33 @@
         <div><p class="eyebrow">CUIDADO DO SEU JEITO</p><h2 id="services-title">Escolha seu<br><em>próximo visual.</em></h2></div>
         <p>Serviços pensados para valorizar seu estilo. Consulte a disponibilidade e os valores atualizados diretamente com a barbearia.</p>
       </div>
-      <div class="service-list">
-        <article class="service-card reveal"><span class="service-num">01</span><div><h3>Corte masculino</h3><p>Do clássico ao moderno, com acabamento cuidadoso.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
-        <article class="service-card reveal"><span class="service-num">02</span><div><h3>Barba</h3><p>Modelagem e contorno para um visual bem definido.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
-        <article class="service-card reveal"><span class="service-num">03</span><div><h3>Cabelo + barba</h3><p>Um cuidado completo para renovar o visual.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
-        <article class="service-card reveal"><span class="service-num">04</span><div><h3>Acabamento</h3><p>Detalhes precisos para manter o corte alinhado.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+      <div class="service-list service-price-list" aria-label="Tabela de serviços e preços">
+        <article class="service-card reveal"><span class="service-num">01</span><div><h3>Corte</h3><p>Corte masculino com acabamento cuidadoso.</p></div><strong class="service-price">R$ 35,00</strong></article>
+        <article class="service-card reveal"><span class="service-num">02</span><div><h3>Barba</h3><p>Modelagem e contorno para um visual definido.</p></div><strong class="service-price">R$ 35,00</strong></article>
+        <article class="service-card reveal"><span class="service-num">03</span><div><h3>Sobrancelha</h3><p>Acabamento para valorizar o olhar.</p></div><strong class="service-price">R$ 15,00</strong></article>
+        <article class="service-card reveal"><span class="service-num">04</span><div><h3>Pigmentação</h3><p>Consulte os detalhes do serviço com a barbearia.</p></div><strong class="service-price">R$ 20,00</strong></article>
+        <article class="service-card reveal"><span class="service-num">05</span><div><h3>Alisamento</h3><p>Consulte o procedimento ideal para seu cabelo.</p></div><strong class="service-price">R$ 20,00</strong></article>
+        <article class="service-card reveal"><span class="service-num">06</span><div><h3>Progressiva</h3><p>Valor varia conforme o cabelo e o procedimento.</p></div><strong class="service-price">A partir de R$ 80,00</strong></article>
+        <article class="service-card reveal"><span class="service-num">07</span><div><h3>Luzes</h3><p>Valor inicial; consulte a avaliação do cabelo.</p></div><strong class="service-price">A partir de R$ 120,00</strong></article>
       </div>
-      <p class="service-note reveal">Serviços, preços e duração devem ser confirmados com a equipe antes do agendamento.</p>
+      <p class="service-note reveal">Os valores de progressiva e luzes são iniciais e podem variar conforme o cabelo e o procedimento.</p>
+    </section>
+
+    <section class="location section-pad" id="localizacao" aria-labelledby="location-title">
+      <div class="section-index reveal">04 <span>— ONDE ESTAMOS</span></div>
+      <div class="location-grid">
+        <div class="location-copy reveal">
+          <p class="eyebrow">VENHA NOS VISITAR</p>
+          <h2 id="location-title">Seu próximo visual<br><em>fica por aqui.</em></h2>
+          <p class="location-address"><strong>Pedro Barber</strong><br>Avenida José Abdomassih, nº 1426<br>Shopping Park, Uberlândia — MG</p>
+          <a class="button button-primary location-button" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Jos%C3%A9+Abdomassih%2C+1426%2C+Shopping+Park%2C+Uberl%C3%A2ndia%2C+MG" target="_blank" rel="noopener noreferrer">Como chegar <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="location-panel reveal" aria-label="Endereço da Pedro Barber em Uberlândia, Minas Gerais">
+          <span class="location-pin" aria-hidden="true">↗</span>
+          <p>SHOPPING PARK<br><strong>UBERLÂNDIA · MG</strong></p>
+          <span class="location-street">AV. JOSÉ ABDOMASSIH, 1426</span>
+        </div>
+      </div>
     </section>
 
     <section class="booking section-pad" id="agendar" aria-labelledby="booking-title">
@@ -111,7 +132,7 @@
         <label for="booking-service">Escolha o serviço</label>
         <select id="booking-service" name="servico" required>
           <option value="" disabled selected>Selecione uma opção</option>
-          <option>Corte masculino</option><option>Barba</option><option>Cabelo + barba</option><option>Acabamento</option><option>Outro serviço</option>
+          <option>Corte — R$ 35,00</option><option>Barba — R$ 35,00</option><option>Sobrancelha — R$ 15,00</option><option>Pigmentação — R$ 20,00</option><option>Alisamento — R$ 20,00</option><option>Progressiva — a partir de R$ 80,00</option><option>Luzes — a partir de R$ 120,00</option>
         </select>
         <div class="form-row">
           <div><label for="booking-date">Dia preferido</label><input id="booking-date" name="dia" type="date" required></div>
@@ -159,6 +180,7 @@
   <footer class="site-footer">
     <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">P<span>.</span></span><span class="brand-copy"><strong>PEDRO<span>BARBER</span></strong><small>ESTILO EM CADA DETALHE</small></span></a>
     <p>Seu estilo. Sua marca.</p>
+    <span class="footer-address">Av. José Abdomassih, 1426 · Shopping Park · Uberlândia/MG</span>
     <span>© <span id="current-year"></span> Pedro Barber. Todos os direitos reservados.</span>
   </footer>
 
