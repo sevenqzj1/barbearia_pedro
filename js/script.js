@@ -3,7 +3,7 @@
 const SITE_CONFIG = {
   // Configure com o telefone oficial: DDI + DDD + número, somente dígitos.
   // Exemplo de formato: 5534999999999. Não use um número fictício.
-  whatsappNumber: '',
+  whatsappNumber: '553492190755',
   businessName: 'Pedro Barber'
 };
 
@@ -135,13 +135,20 @@ function showToast(message) {
   toastTimeout = window.setTimeout(() => toast.classList.remove('is-visible'), 4500);
 }
 
-function getWhatsAppUrl(message) {
+function getWhatsAppUrl(message = 'Olá! Gostaria de consultar os horários disponíveis na ' + SITE_CONFIG.businessName + '.') {
   const number = SITE_CONFIG.whatsappNumber.replace(/\D/g, '');
   if (!number) return null;
   return 'https://wa.me/' + number + '?text=' + encodeURIComponent(message);
 }
 
 document.querySelectorAll('.whatsapp-link').forEach(link => {
+  const whatsappUrl = getWhatsAppUrl();
+  if (whatsappUrl) {
+    link.href = whatsappUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  }
+
   link.addEventListener('click', event => {
     if (SITE_CONFIG.whatsappNumber.replace(/\D/g, '')) return;
     event.preventDefault();
