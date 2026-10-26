@@ -34,8 +34,8 @@
       <a href="#inicio">Início</a>
       <a href="#sobre">A barbearia</a>
       <a href="#servicos">Serviços</a>
-      <a href="#galeria">Galeria</a>
       <a class="nav-cta whatsapp-link" href="#agendar">Agendar horário <span aria-hidden="true">↗</span></a>
+      <a href="#galeria">Galeria</a>
     </nav>
   </header>
 
@@ -97,6 +97,30 @@
       <p class="service-note reveal">Serviços, preços e duração devem ser confirmados com a equipe antes do agendamento.</p>
     </section>
 
+    <section class="booking section-pad" id="agendar" aria-labelledby="booking-title">
+      <div class="booking-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> SEU PRÓXIMO CORTE COMEÇA AQUI</p>
+        <h2 id="booking-title">Hora de cuidar<br><em>do seu estilo.</em></h2>
+        <p>Escolha o serviço e indique sua preferência. Vamos preparar uma mensagem para consultar a disponibilidade pelo WhatsApp. O horário só estará confirmado após a resposta da barbearia.</p>
+        <div class="booking-detail"><span class="detail-icon" aria-hidden="true">↗</span><div><strong>Atendimento personalizado</strong><small>Consulte os horários disponíveis pelo WhatsApp.</small></div></div>
+      </div>
+      <form class="booking-form reveal" id="booking-form">
+        <div class="form-heading"><span>AGENDAMENTO</span><span>01 — 04</span></div>
+        <label for="booking-name">Seu nome</label>
+        <input id="booking-name" name="nome" autocomplete="name" placeholder="Como podemos te chamar?" maxlength="80" required>
+        <label for="booking-service">Escolha o serviço</label>
+        <select id="booking-service" name="servico" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option>Corte masculino</option><option>Barba</option><option>Cabelo + barba</option><option>Acabamento</option><option>Outro serviço</option>
+        </select>
+        <div class="form-row">
+          <div><label for="booking-date">Dia preferido</label><input id="booking-date" name="dia" type="date" required></div>
+          <div><label for="booking-time">Período</label><select id="booking-time" name="horario" required><option value="" disabled selected>Escolha</option><option>Manhã</option><option>Tarde</option><option>Flexível</option></select></div>
+        </div>
+        <button class="button button-primary form-submit" type="submit">Consultar no WhatsApp <span aria-hidden="true">↗</span></button>
+        <p class="form-feedback" id="form-feedback" aria-live="polite">Você poderá revisar a mensagem antes de enviá-la.</p>
+      </form>
+    </section>
     <section class="statement" aria-label="Manifesto da Pedro Barber">
       <div class="statement-text reveal"><span class="statement-mark" aria-hidden="true">“</span><p>Não é só sobre<br>aparência. É sobre<br><em>como você se sente.</em></p><span class="statement-caption">PEDRO BARBER — SEU ESTILO, SUA MARCA.</span></div>
       <div class="statement-image" aria-hidden="true"></div>
@@ -124,30 +148,6 @@
       </div>
     </section>
 
-    <section class="booking section-pad" id="agendar" aria-labelledby="booking-title">
-      <div class="booking-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> SEU PRÓXIMO CORTE COMEÇA AQUI</p>
-        <h2 id="booking-title">Hora de cuidar<br><em>do seu estilo.</em></h2>
-        <p>Escolha o serviço e indique sua preferência. Vamos preparar uma mensagem para consultar a disponibilidade pelo WhatsApp. O horário só estará confirmado após a resposta da barbearia.</p>
-        <div class="booking-detail"><span class="detail-icon" aria-hidden="true">↗</span><div><strong>Atendimento personalizado</strong><small>Consulte os horários disponíveis pelo WhatsApp.</small></div></div>
-      </div>
-      <form class="booking-form reveal" id="booking-form">
-        <div class="form-heading"><span>AGENDAMENTO</span><span>01 — 04</span></div>
-        <label for="booking-name">Seu nome</label>
-        <input id="booking-name" name="nome" autocomplete="name" placeholder="Como podemos te chamar?" maxlength="80" required>
-        <label for="booking-service">Escolha o serviço</label>
-        <select id="booking-service" name="servico" required>
-          <option value="" disabled selected>Selecione uma opção</option>
-          <option>Corte masculino</option><option>Barba</option><option>Cabelo + barba</option><option>Acabamento</option><option>Outro serviço</option>
-        </select>
-        <div class="form-row">
-          <div><label for="booking-date">Dia preferido</label><input id="booking-date" name="dia" type="date" required></div>
-          <div><label for="booking-time">Período</label><select id="booking-time" name="horario" required><option value="" disabled selected>Escolha</option><option>Manhã</option><option>Tarde</option><option>Flexível</option></select></div>
-        </div>
-        <button class="button button-primary form-submit" type="submit">Consultar no WhatsApp <span aria-hidden="true">↗</span></button>
-        <p class="form-feedback" id="form-feedback" aria-live="polite">Você poderá revisar a mensagem antes de enviá-la.</p>
-      </form>
-    </section>
 
     <section class="closing">
       <p class="eyebrow reveal">PEDRO BARBER · ESTILO EM CADA DETALHE</p>
